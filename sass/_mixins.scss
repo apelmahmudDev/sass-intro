@@ -1,0 +1,41 @@
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@mixin box($bgColor) {
+	margin-bottom: $boxMarginBottom;
+	height: $boxHeight;
+	width: $boxWidth;
+	background: $bgColor;
+	color: $boxTextColor;
+}
+@mixin button($color, $bgColor) {
+	font-size: inherit;
+	padding: 10px 30px;
+	display: flex;
+	color: $color;
+	background: $bgColor;
+	border-radius: 1.8rem;
+	border: 0;
+	cursor: pointer;
+	&:hover {
+		background-color: darken($color: $bgColor, $amount: 5%);
+		transition: 0.2s ease-in;
+	}
+	&:active {
+		background-color: lighten($color: $bgColor, $amount: 5%);
+		padding: 10px 32px;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+// dark & light theme
+@mixin theme-colors($theme) {
+	@if $theme == "light" {
+		background-color: $light-bg;
+	} @else {
+		background-color: $dark-bg;
+	}
+}

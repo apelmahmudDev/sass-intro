@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./mixins";
+
+body {
+	@include theme-colors("light");
+	@include reset;
+}
+
+.box-1 {
+	@include box(green);
+}
+
+.box-2 {
+	@include box(yellow);
+}
+
+.btn {
+	@include button(#fff, tomato);
+}
+
+.btn2 {
+	@include button(#fff, blue);
+	gap: 5px;
+	align-items: center;
+	margin-top: 10px;
+}
+
+$sizes: 40px, 50px, 80px;
+@each $size in sizes {
+	.icon-#{$size} {
+		font-size: $size;
+	}
+}
