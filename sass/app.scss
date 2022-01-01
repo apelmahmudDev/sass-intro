@@ -31,3 +31,10 @@ $sizes: 40px, 50px, 80px;
 		font-size: $size;
 	}
 }
+
+.card-1 {
+	@include card($bg-primary);
+}
+.card-2 {
+	@extend .card-1;
+}

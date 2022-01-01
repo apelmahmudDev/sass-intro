@@ -23,6 +23,18 @@ Sass is a stylesheet language that’s compiled to CSS. It allows you to use var
 background-color: darken($color: $bgColor, $amount: 5%);
 background-color: lighten($color: $bgColor, $amount: 5%);
 
+### @extend:
+
+.box-1 {
+background: green;
+}
+
+### Use:
+
+.card-1 {
+@extend .box-1;
+}
+
 ### @mixin and @include:
 
 ### Example -1:

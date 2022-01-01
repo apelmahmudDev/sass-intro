@@ -39,3 +39,16 @@
 		background-color: $dark-bg;
 	}
 }
+// cards
+@mixin card($background) {
+	background: $background;
+	padding: 1rem;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	h3 {
+		color: $text-white;
+	}
+	p {
+		color: $text-dark;
+	}
+}
